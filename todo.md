@@ -1,0 +1,95 @@
+# AdPulse CRM Dashboard - TODO
+
+- [x] Design system: tema escuro elegante com paleta sofisticada, tipografia refinada e espaçamento generoso
+- [x] Layout de dashboard com sidebar persistente e topbar com perfil do usuário
+- [x] Autenticação OAuth com proteção de rotas privadas
+- [x] Dashboard principal com KPI cards (receita, leads, conversões, ROI)
+- [x] Dashboard principal com gráfico de linha (tendência de receita)
+- [x] Dashboard principal com gráfico de barra (comparativo de campanhas)
+- [x] Gerenciamento de campanhas: listagem com status (ativa, pausada, encerrada)
+- [x] Gerenciamento de campanhas: criação de nova campanha
+- [x] Gerenciamento de campanhas: edição de campanha existente
+- [x] Gerenciamento de campanhas: exclusão de campanha
+- [x] Gerenciamento de contatos/leads: tabela com busca e filtros por status
+- [x] Gerenciamento de contatos/leads: ordenação de colunas
+- [x] Gerenciamento de contatos/leads: modal de detalhes e edição
+- [x] Controle de orçamento por campanha: visualização gasto atual vs orçamento total
+- [x] Controle de orçamento por campanha: barra de progresso
+- [x] Controle de orçamento por campanha: alertas de limite
+- [x] Relatórios de desempenho: gráfico de dispersão (Budget Pacing vs KPI)
+- [x] Relatórios de desempenho: filtros por período (7d, 30d, 90d)
+- [x] Página de configurações: editar perfil do usuário
+- [x] Página de configurações: preferências do sistema
+- [x] Schema do banco de dados (campanhas, leads, orçamentos)
+- [x] tRPC routers para campanhas, leads, orçamentos e relatórios
+- [x] Testes unitários (vitest)
+- [x] Aba Comercial na sidebar com página placeholder
+- [x] Aba Operacional na sidebar com página de CRM Kanban
+- [x] CRM Kanban arrastável com colunas: Lead Frio, Follow Up, Reunião Marcada
+- [x] Drag and drop funcional entre colunas do Kanban
+- [x] Cards de leads no Kanban com informações relevantes
+- [x] Backend: tabela e routers para leads do CRM Kanban
+- [x] Atualizar sidebar com seções Comercial e Operacional
+- [x] Fix: preferences.get retornando undefined causa erro no TanStack Query
+- [x] Schema: campo position (cargo) na tabela users com enum (ceo, coo, head, cs, gestor_trafego, social_media)
+- [x] Schema: tabela de demandas (tasks) com assignee, criador, status
+- [x] Backend: middleware de permissões baseado em cargo
+- [x] Backend: routers para gestão de membros da equipe e cargos
+- [x] Backend: routers para demandas com controle de visibilidade por cargo
+- [x] Frontend: página Painel de Equipe com listagem de membros e cargos
+- [x] Frontend: atribuição e edição de cargos (CEO/COO podem alterar tudo)
+- [x] Frontend: página de Demandas com criação e atribuição
+- [x] Frontend: Head vê e gerencia demandas do squad inteiro
+- [x] Frontend: CS, Gestor de Tráfego e Social Media veem apenas suas demandas
+- [x] Sidebar: adicionar Equipe e Demandas na navegação
+- [x] Sidebar: Operacional com subseções colapsáveis (Squads, Projetos, Tarefas)
+- [x] Schema: tabela squads com MRR mensal e faixa de ROI
+- [x] Schema: tabela clients vinculada a squads com pipeline, horário, localização, forma de pagamento
+- [x] Schema: tabela projects vinculada a clients
+- [x] Schema: tabela projectFiles para mídias de captação (upload S3)
+- [x] Backend: routers CRUD para squads, clients, projects e projectFiles
+- [x] Frontend: página Squads com MRR, ROI, qtd clientes e pipeline
+- [x] Frontend: modal/aba de informações do cliente (horário, localização, pagamento)
+- [x] Frontend: página Projetos com arquivos/mídias por cliente (upload S3)
+- [x] Frontend: mover Tarefas/Demandas para dentro de Operacional
+- [x] Schema: adicionar cargos SDR, BDR e Closer ao enum de positions
+- [x] Backend: atualizar POSITIONS e lógica de permissões para novos cargos comerciais
+- [x] Sidebar: mover Campanhas, Orçamento e Relatórios para dentro de Operacional
+- [x] Sidebar: mover CRM Pipeline e Contatos para dentro de Comercial
+- [x] Restrição C-level: Contatos dos clientes, Relatórios, Orçamentos e Campanhas visíveis apenas para CEO/COO
+- [x] Frontend: controle de visibilidade de rotas por cargo no DashboardLayout
+- [x] Testes: atualizar testes para novos cargos e permissões
+- [x] Schema: tabela squad_members vinculando users a squads (userId, squadId, role)
+- [x] Backend: helpers para adicionar/remover membros de squads
+- [x] Backend: filtrar dados de squads, clientes, projetos e tarefas por squad do Head
+- [x] Frontend: UI para gerenciar membros dentro de cada squad (adicionar/remover com dialog)
+- [x] Frontend: melhorar UX da UI de membros (fechar modal ao adicionar, confirmação ao remover)
+- [x] Frontend: atualizar Projects.tsx para filtrar projetos por squad do Head (backend já filtra)
+- [x] Frontend: atualizar Tasks.tsx para filtrar tarefas por squad do Head
+- [x] Testes: cobertura de permissões de squad por Head
+- [x] Schema: tabela notifications (userId, type, title, message, taskId, read, createdAt)
+- [x] Backend: helpers CRUD para notificações (criar, listar por user, marcar como lida)
+- [x] Backend: lógica de verificação de prazos (tarefas vencendo em 24h e vencidas)
+- [x] Backend: endpoint para gerar notificações de prazo sob demanda
+- [x] Frontend: ícone de sino com badge de contagem no header do DashboardLayout
+- [x] Frontend: painel dropdown de notificações com listagem e marcação de lidas
+- [x] Frontend: polling automático para verificar novas notificações
+- [x] Testes: cobertura de notificações (criar, listar, marcar como lida)
+- [x] Backend: endpoint dashboard.myStats retornando KPIs baseados no cargo do usuário
+- [x] Backend: CEO/COO veem métricas globais (receita, leads, conversões, ROI, campanhas ativas)
+- [x] Backend: Head vê métricas do squad (MRR, clientes, tarefas do squad, membros)
+- [x] Backend: SDR/BDR/Closer veem métricas comerciais pessoais (leads no pipeline, follow-ups, reuniões)
+- [x] Backend: CS/Gestor de Tráfego/Social Media veem métricas operacionais pessoais (tarefas pendentes, concluídas, vencidas)
+- [x] Frontend: Dashboard adaptativo que renderiza KPIs diferentes conforme o cargo
+- [x] Frontend: Cards de KPI personalizados por cargo com ícones e cores distintas
+- [x] Frontend: Gráficos relevantes por cargo (ex: pipeline para comercial, tarefas para operacional)
+- [x] Testes: cobertura do endpoint myStats por diferentes cargos
+- [x] Schema: campo approvalStatus na tabela users (pending, approved, rejected)
+- [x] Backend: novos usuários entram com status 'pending' por padrão (exceto owner que é auto-approved)
+- [x] Backend: endpoint C-level para aprovar/rejeitar usuários pendentes
+- [x] Backend: endpoint C-level para remover (desativar) membros do dashboard
+- [x] Backend: middleware que bloqueia acesso de usuários não aprovados
+- [x] Frontend: tela de aprovação pendente para usuários aguardando aprovação
+- [x] Frontend: painel C-level de gestão de membros (aprovar, rejeitar, remover)
+- [x] Frontend: indicador de usuários pendentes no header (badge PendingMembersBadge)
+- [x] Testes: cobertura de aprovação e remoção de membros

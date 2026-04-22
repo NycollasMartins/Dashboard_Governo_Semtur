@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `userPreferences` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`currency` varchar(8) NOT NULL DEFAULT 'BRL',\n\t`language` varchar(8) NOT NULL DEFAULT 'pt-BR',\n\t`budgetAlertThreshold` int NOT NULL DEFAULT 80,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `userPreferences_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `userPreferences_userId_unique` UNIQUE(`userId`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway05.us-east-1.prod.aws.tidbcloud.com --port 4000 --user W1TZZeB5QUa4w1L.root --database 4kGvCEpyEzUmu5xaAseaVZ --execute CREATE TABLE `userPreferences` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`currency` varchar(8) NOT NULL DEFAULT 'BRL',\n\t`language` varchar(8) NOT NULL DEFAULT 'pt-BR',\n\t`budgetAlertThreshold` int NOT NULL DEFAULT 80,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `userPreferences_id` PRIMARY KEY(`id`),\n\tCONSTRAINT `userPreferences_userId_unique` UNIQUE(`userId`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 619
+}

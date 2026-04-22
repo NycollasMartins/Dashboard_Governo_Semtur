@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `users` ADD `position` enum('ceo','coo','head','cs','gestor_trafego','social_media') DEFAULT 'cs';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway05.us-east-1.prod.aws.tidbcloud.com --port 4000 --user W1TZZeB5QUa4w1L.root --database 4kGvCEpyEzUmu5xaAseaVZ --execute ALTER TABLE `users` ADD `position` enum('ceo','coo','head','cs','gestor_trafego','social_media') DEFAULT 'cs';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 232
+}

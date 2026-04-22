@@ -1,0 +1,1 @@
+ALTER TABLE `users` MODIFY COLUMN `position` enum('ceo','coo','head','cs','gestor_trafego','social_media','sdr','bdr','closer') DEFAULT 'cs';
