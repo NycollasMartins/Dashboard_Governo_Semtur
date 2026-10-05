@@ -1,0 +1,29 @@
+{
+  "name": "CampaignData",
+  "type": "object",
+  "properties": {
+    "dia": {
+      "type": "string",
+      "description": "Data do registro"
+    },
+    "criativo": {
+      "type": "string",
+      "description": "Nome do criativo"
+    },
+    "impressoes_display": {
+      "type": "number",
+      "description": "Impress\u00f5es Display"
+    },
+    "cliques_display": {
+      "type": "number",
+      "description": "Cliques Display"
+    },
+    "estado": {
+      "type": "string",
+      "description": "Estado ou cidade"
+    }
+  },
+  "required": [
+    "dia"
+  ]
+}
